@@ -62,5 +62,5 @@ do
         cat $folder/pathsfromjs.txt | grep "^/" | cut -d "/" -f $i | sort -u >> /tmp/words.txt
 done
 
-cat /tmp/words.txt | egrep -v '(\-|\_|^[A-Z]|\;|\:\{|\+|\,|\#|\@)' | sort -u > $folder/${folder}-specific-wordlist.txt
+cat /tmp/words.txt | egrep -v '(\:|\-|\_|^[A-Z]|\;|\:\{|\+|\,|\#|\@)' | sort -u > $folder/${folder}-specific-wordlist.txt
 echo -e "${GREEN}[*] Done! Check $folder/${folder}-specific-wordlist.txt"
